@@ -1,0 +1,91 @@
+<div class="tr-job-posted section-padding">
+    <div class="container-fluid">
+
+<h1 class="d-flex justify-content-center mt-3 main-header">Vehicle Related Services</h1>
+
+        <div class="container-fluid">
+            <div class="slider">
+              <div class="box1">
+              </div>
+              <div class="box2">
+              </div>
+              <div class="box3">
+              </div>
+              <div class="box4">
+              </div>
+              <div class="box5">
+              </div>
+              <div class="box6">
+              </div>
+              <div class="box7">
+              </div>
+            </div>
+        </div>
+
+
+
+        <div class="job-tab text-center">
+
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link" [class.active]="activeTab === 'accessories'" (click)="changeTab('accessories')">Accessories</a>
+                </li>
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link" [class.active]="activeTab === 'repair'" (click)="changeTab('repair')">Repair</a>
+                </li>
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link" [class.active]="activeTab === 'spare-parts'" (click)="changeTab('spare-parts')">Spare Parts</a>
+                </li>
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link" [class.active]="activeTab === 'vehicle-selling'" (click)="changeTab('vehicle-selling')">Vehicle Selling</a>
+                </li>
+            </ul>
+            
+            <div class="tab-content">
+                <div *ngIf="activeTab === 'accessories'" class="tab-pane fade show active" id="accessories" role="tabpanel" aria-labelledby="accessories-tab">
+                    <div class="row">
+                        <ng-container *ngFor="let item of accessoriesData" >
+                                <div class="col-md-3">
+                                <app-small-cards [data]="item"></app-small-cards>
+                            </div>
+                            </ng-container>
+                        
+                    </div>
+                </div>
+
+                <div *ngIf="activeTab === 'repair'" class="tab-pane fade show active" id="repair" role="tabpanel" aria-labelledby="repair-tab">
+                    <div class="row">
+                        <ng-container *ngFor="let item of accessoriesData" >
+                                <div class="col-md-3">
+                                <app-small-cards [data]="item"></app-small-cards>
+                            </div>
+                            </ng-container>
+                        
+                    </div>
+                </div>
+                <div *ngIf="activeTab === 'spare-parts'" class="tab-pane fade show active" id="spare-parts" role="tabpanel" aria-labelledby="spare-parts-tab">
+                    <div class="row">
+                        <ng-container *ngFor="let item of accessoriesData" >
+                                <div class="col-md-3">
+                                <app-small-cards [data]="item"></app-small-cards>
+                            </div>
+                            </ng-container>
+                        
+                    </div>
+                </div>
+                <div *ngIf="activeTab === 'vehicle-selling'" class="tab-pane fade show active" id="vehicle-selling" role="tabpanel" aria-labelledby="vehicle-selling-tab">
+                    <div class="row">
+                    <ng-container *ngFor="let item of accessoriesData" >
+                            <div class="col-md-3">
+                            <app-small-cards [data]="item"></app-small-cards>
+                        </div>
+                        </ng-container>
+                    
+                </div>
+            </div>
+                
+            </div>
+          
+        </div>
+    </div>
+</div>
