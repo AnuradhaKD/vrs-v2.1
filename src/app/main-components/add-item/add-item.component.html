@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="row justify-content-center d-flex" style="margin-top: 50px;">
+      <div class="col-md-8">
+        <div class="card" style="width: 100%; padding: 20px 50px;">
+          <h5 class="card-title">Add Your Item(s) / Service</h5>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your Name" [(ngModel)]="formData.name">
+                </div>
+  
+                <div class="form-group col-md-3">
+                  <label for="contactNumber1">Contact Number 1</label>
+                  <input type="text" class="form-control" id="contactNumber1" placeholder="Contact Number 1"
+                    [(ngModel)]="formData.contactNumber1">
+                </div>
+  
+                <div class="form-group col-md-3">
+                  <label for="contactNumber2">Contact Number 2</label>
+                  <input type="text" class="form-control" id="contactNumber2" placeholder="Contact Number 2"
+                    [(ngModel)]="formData.contactNumber2">
+                </div>
+  
+                <div class="form-group col-md-6">
+                  <label for="shopName">Shop Name</label>
+                  <input type="text" class="form-control" id="shopName" placeholder="Shop Name"
+                    [(ngModel)]="formData.shopName">
+                </div>
+  
+                <div class="form-group col-md-6">
+                  <label for="shopType">Type</label>
+                  <select id="shopType" class="form-control" [(ngModel)]="formData.shopType">
+                    <option selected>Choose...</option>
+                    <option value="1">Accessories</option>
+                    <option value="2">Repair</option>
+                    <option value="3">Spare Parts</option>
+                    <option value="4">Vehicle Selling</option>
+                  </select>
+                </div>
+  
+                <div class="form-group col-md-12">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="Shop Address"
+                    [(ngModel)]="formData.address">
+                </div>
+  
+                <div class="form-group col-md-4">
+                  <label for="itemName">Item Name</label>
+                  <input type="text" class="form-control" id="itemName" placeholder="Item Name"
+                    [(ngModel)]="formData.itemName">
+                </div>
+  
+                <div class="form-group col-md-4">
+                  <label for="images">Images</label>
+                  <input type="file" class="form-control" id="images" [(ngModel)]="formData.images">
+                </div>
+  
+                <div class="form-group col-md-4">
+                  <label for="itemPrice">Price</label>
+                  <input type="text" class="form-control" id="itemPrice" placeholder="Item Price"
+                    [(ngModel)]="formData.itemPrice">
+                </div>
+  
+                <div class="form-group col-md-4">
+                  <label for="description">Description</label>
+                  <input type="text" class="form-control" id="description" placeholder="Item Details"
+                    [(ngModel)]="formData.description">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary">Post Ad</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

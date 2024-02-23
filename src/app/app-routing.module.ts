@@ -7,8 +7,12 @@ import { HomeComponent } from './main-components/home/home.component';
 import { ContactDealerComponent } from './main-components/contact-dealer/contact-dealer.component';
 import { SearchComponent } from './main-components/search/search.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
+import { AddItemComponent } from './main-components/add-item/add-item.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+{ path: 'registration', component: RegistrationComponent },
   {
     path: '',
     component: AppLayoutComponent,
@@ -16,14 +20,11 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'contact-seller', component: ContactDealerComponent },
       { path: 'search', component: SearchComponent },
+      { path: 'add-item', component: AddItemComponent },
       // Add other routes for your layout component
     ]
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'registration', component: RegistrationComponent },
-  // { path: 'sell-items', component: SellerItemsComponent },
-  // Add other routes for pages outside the layout
-  { path: '**', redirectTo: '/login', pathMatch: 'full' }, // Redirect any unknown paths to login
+   // Redirect any unknown paths to login
 ];
 
 @NgModule({
