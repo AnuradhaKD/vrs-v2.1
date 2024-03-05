@@ -55,7 +55,7 @@
 
                 <div *ngIf="activeTab === 'repair'" class="tab-pane fade show active" id="repair" role="tabpanel" aria-labelledby="repair-tab">
                     <div class="row">
-                        <ng-container *ngFor="let item of accessoriesData" >
+                        <ng-container *ngFor="let item of repairData" >
                                 <div class="col-md-3">
                                 <app-small-cards [data]="item"></app-small-cards>
                             </div>
@@ -65,7 +65,7 @@
                 </div>
                 <div *ngIf="activeTab === 'spare-parts'" class="tab-pane fade show active" id="spare-parts" role="tabpanel" aria-labelledby="spare-parts-tab">
                     <div class="row">
-                        <ng-container *ngFor="let item of accessoriesData" >
+                        <ng-container *ngFor="let item of sparePartsData" >
                                 <div class="col-md-3">
                                 <app-small-cards [data]="item"></app-small-cards>
                             </div>
@@ -75,7 +75,7 @@
                 </div>
                 <div *ngIf="activeTab === 'vehicle-selling'" class="tab-pane fade show active" id="vehicle-selling" role="tabpanel" aria-labelledby="vehicle-selling-tab">
                     <div class="row">
-                    <ng-container *ngFor="let item of accessoriesData" >
+                    <ng-container *ngFor="let item of sellVehicleData" >
                             <div class="col-md-3">
                             <app-small-cards [data]="item"></app-small-cards>
                         </div>

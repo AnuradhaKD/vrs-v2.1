@@ -23,6 +23,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AddItemComponent } from './main-components/add-item/add-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { AddItemComponent } from './main-components/add-item/add-item.component'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

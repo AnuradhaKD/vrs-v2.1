@@ -1,6 +1,6 @@
 // src/app/login/login.component.ts
 import { Component } from '@angular/core';
-import { AuthService } from '../../shared/services/auth.service';
+import { AuthService } from '../../shared/services/auth/auth.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 // import { AngularFireAuth } from '@angular/fire/auth';
 

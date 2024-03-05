@@ -1,71 +1,100 @@
 import { Component } from '@angular/core';
-declare var $:any
+import { CommonService } from 'src/app/shared/services/common/common.service';
+declare var $: any;
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  accessoriesData: any;
-
   activeTab: string = 'accessories';
+  formDataList: any[];
 
- 
+  accessoriesData: any=[];
+  repairData: any=[];
+  sparePartsData: any=[];
+  sellVehicleData: any=[];
 
+  constructor(private commonService: CommonService) {}
 
   ngOnInit() {
-    this.accessoriesData = [
-      {
-        imgLink:'../../../assets/vimg/headlights1.jpeg',
-        name:'Head Light',
-        description:'Car head light You can call and get',
-        price:'20000',
+    this.loadData();
+    setTimeout(() => {
+      console.log(this.accessoriesData);
+      console.log(this.repairData);
+      console.log(this.sparePartsData);
+      console.log(this.sellVehicleData);
+    }, 4000);
 
-      },
-
-      {
-        imgLink:'../../../assets/vimg/headlights2.jpeg',
-        name:'Head Light set',
-        description:'Car head light',
-        price:'15000',
-
-      },
-
-      {
-        imgLink:'../../../assets/vimg/tire1.jpeg',
-        name:'Car tire',
-        description:'With good condition',
-        price:'8500',
-
-      },
-
-      {
-        imgLink:'../../../assets/vimg/seat1.jpeg',
-        name:'Seat Cover set',
-        description:'You can custermize what you want.call us',
-        price:'19000',
-
-      },
-
-      {
-        imgLink:'../../../assets/vimg/headlights3.jpeg',
-        name:'Custom Head Light set',
-        description:' Custom car head light set. With many colors',
-        price:'35000',
-
-      },
-    ]
-
-    window.setInterval( () => {
+    window.setInterval(() => {
       this.rotate();
     }, 4000);
   }
 
+  loadData() {
+    this.commonService.getAllData().subscribe((data) => {
+      this.formDataList = data;
+      console.log(this.formDataList); 
+
+      
+
+      $(this.formDataList).each((index, item) => {
+        let checkType = item.shopType;
+        if (checkType === '1') {
+          let temp = {
+            name: item.name,
+            shopName: item.shopName,
+            shopAddress: item.shopAddress,
+            itemName: item.itemName,
+            description: item.description,
+            itemPrice: item.itemPrice,
+            imageUrls: item.imageUrls,
+          };
+          this.accessoriesData.push(temp);
+        } else if (checkType === '2') {
+          let temp = {
+            name: item.name,
+            shopName: item.shopName,
+            shopAddress: item.shopAddress,
+            itemName: item.itemName,
+            description: item.description,
+            itemPrice: item.itemPrice,
+            imageUrls: item.imageUrls,
+          };
+          this.repairData.push(temp);
+        } else if (checkType === '3') {
+          let temp = {
+            name: item.name,
+            shopName: item.shopName,
+            shopAddress: item.shopAddress,
+            itemName: item.itemName,
+            description: item.description,
+            itemPrice: item.itemPrice,
+            imageUrls: item.imageUrls,
+          };
+          this.sparePartsData.push(temp);
+        } else if (checkType === '4') {
+          let temp = {
+            name: item.name,
+            shopName: item.shopName,
+            shopAddress: item.shopAddress,
+            itemName: item.itemName,
+            description: item.description,
+            itemPrice: item.itemPrice,
+            imageUrls: item.imageUrls,
+          };
+          this.sellVehicleData.push(temp);
+        } else {
+          console.log('ínvalid');
+        }
+      });
+    });
+  }
 
   changeTab(tab: string): void {
     this.activeTab = tab;
-}
+  }
   rotate() {
     var lastChild = $('.slider div:last-child').clone();
     /*$('#test').html(lastChild)*/

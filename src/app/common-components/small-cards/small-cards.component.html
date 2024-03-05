@@ -3,21 +3,21 @@
     <div class="card-sl">
         <div class="card-image">
             <img
-                src="{{data.imgLink}}" style="height: 300px; background-size: cover;"/>
+                src="{{data.imageUrls[0]}}" style="height: 300px; background-size: cover;" alt="card image"/>
         </div>
 
         <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
         <div class="card-heading">
-            {{data.name}}
+            {{data.itemName}}
         </div>
         <div class="card-text">
             {{data.description}}
         </div>
         <div class="card-text">
-            Rs. {{data.price}} /=
+            Rs. {{data.itemPrice}} /=
         </div>
         
-        <a href="contact-seller" class="card-button"> Contact seller</a>
+        <a href="contact-seller" class="card-button" id="contactSeller" (click)="getSessionData(data)"> Contact seller</a>
     </div>
 
 </div>

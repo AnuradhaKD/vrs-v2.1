@@ -1,29 +1,31 @@
-<div class="container">
-    <form action="">
-        
-        <div class="row">
-            <div class="col-12 mb-3">
-                <input
-                style="width:100%; height: 50px"
-                type="text"
-                name="searchText"
-                placeholder="Search"
-                id="searchText"
-                />
-            </div>
-            
-            <div class="col-md-2">
-                <a class="btn btn-primary" href="">Search on Daraz</a>
-            </div>
-            <div class="col-md-2">
-                <a class="btn btn-success" href="">Search on Ikman.lk</a>
-            </div>
-            <div class="col-md-2">
-                <a class="btn btn-info" href="">Search on AliExpress</a>
-            </div>
-            <div class="col-md-2">
-                <a class="btn btn-warning" href="">Search on Ebay</a>
-            </div>
-        </div>
-    </form>    
+<div class="row">
+<div class="col-md-12">
+
+  <input [(ngModel)]="searchQuery" placeholder="Enter your search query" />
+  <button (click)="search()">Search</button>
 </div>
+  
+  <div class="col-md-8">
+      <h2>Daraz</h2>
+      <iframe [src]="sanitizedDarazIframeSrc" frameborder="0" width="100%" height="500px" title="daraz"></iframe>
+    </div>
+    
+    <div class="col-md-6">
+      <h2>Ikman</h2>
+      <iframe [src]="sanitizedIkmanIframeSrc" frameborder="0" width="100%" height="500px" title="ikman"></iframe>
+    </div>
+    
+    <div class="col-md-6">
+      <h2>Ali</h2>
+      <iframe [src]="sanitizedAliIframeSrc" frameborder="0" width="100%" height="500px" title="ali"></iframe>
+    </div>
+    
+    <div class="col-md-6">
+      <h2>Ebay</h2>
+      <iframe [src]="sanitizedEbayIframeSrc" frameborder="0" width="100%" height="500px" title="ebay"></iframe>
+    </div>
+
+      <div class="col-md-4">
+<h3>Comparission</h3>
+      </div>
+  </div>

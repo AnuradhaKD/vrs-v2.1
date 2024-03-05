@@ -5,30 +5,32 @@
           <div class="col-md-12">
             <img src="../../../assets/img/01.png" class="img-fluid rounded-start" style="height: 65vh;" alt="...">
           </div>
-          <div class="col-md-3">
-            <img src="../../../assets/img/05.png" class="img-fluid rounded-start" style="height: 20vh;"  alt="...">
+          <ng-container *ngFor="let item for data.imageUrls">
+            <div class="col-md-3">
+              <img src="../../../assets/img/05.png" class="img-fluid rounded-start" style="height: 20vh;"  alt="...">
+            </div>
+          </ng-container>
           </div>
-          <div class="col-md-3">
-            <img src="../../../assets/img/02.png" class="img-fluid rounded-start" style="height: 20vh;" alt="...">
           </div>
-          <div class="col-md-3">
-            <img src="../../../assets/img/03.png" class="img-fluid rounded-start" style="height: 20vh;"  alt="...">
+          <div class="col-md-5">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <h3 class="card-title">{{data.itemName}}</h3>
+                </div>
+                <div class="col-12">
+                  <p class="card-text">{{data.description}}</p>
+                </div>
+                <div class="col-12">
+                  <h2 class="card-text"><small class="text-muted">{{data.itemPrice}}</small></h2>
+                </div>
+          
+                <h5 class="card-title">Seller Details</h5>
+                <p class="card-text">{{data.name}}</p>
+                <p class="card-text">{{data.shopName}}</p>
+                <p class="card-text">{{data.shopAddress}}</p>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3">
-            <img src="../../../assets/img/04.png" class="img-fluid rounded-start" style="height: 20vh;"  alt="...">
           </div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div class="card-body">
-          <h5 class="card-title">Title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Price</small></p>
-
-          <h5 class="card-title">Seller Details</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Price</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
+          </div>

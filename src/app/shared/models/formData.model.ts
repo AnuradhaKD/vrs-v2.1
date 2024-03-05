@@ -4,9 +4,9 @@ export class FormDataModel {
     contactNumber2: string;
     shopName: string;
     shopType: string;
-    address: string;
+    shopAddress: string;
     itemName: string;
-    images: File;
+    imageUrls:  string[] = [];
     itemPrice: string;
     description: string;
   
@@ -17,9 +17,9 @@ export class FormDataModel {
       this.contactNumber2 = '';
       this.shopName = '';
       this.shopType = '';
-      this.address = '';
+      this.shopAddress = '';
       this.itemName = '';
-      this.images = null;
+      this.imageUrls =[];
       this.itemPrice = '';
       this.description = '';
     }
