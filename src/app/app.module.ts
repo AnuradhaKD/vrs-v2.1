@@ -24,6 +24,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AddItemComponent } from './main-components/add-item/add-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './main-components/about-us/about-us.component';
+import { ContactUsComponent } from './main-components/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     SearchComponent,
     AppLayoutComponent,
     AddItemComponent,
+    AboutUsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

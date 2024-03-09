@@ -8,6 +8,8 @@ import { ContactDealerComponent } from './main-components/contact-dealer/contact
 import { SearchComponent } from './main-components/search/search.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { AddItemComponent } from './main-components/add-item/add-item.component';
+import { AboutUsComponent } from './main-components/about-us/about-us.component';
+import { ContactUsComponent } from './main-components/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -21,6 +23,8 @@ const routes: Routes = [
       { path: 'contact-seller', component: ContactDealerComponent },
       { path: 'search', component: SearchComponent },
       { path: 'add-item', component: AddItemComponent },
+      { path: 'about', component: AboutUsComponent },
+      { path: 'contact', component: ContactUsComponent },
       // Add other routes for your layout component
     ]
   },

@@ -32,18 +32,29 @@
         </div>
       </div>
     </nav>
-    <div class="main-cotent">
+    <div class="main-cotent" style="padding-bottom: 120px;">
   <router-outlet></router-outlet>
     </div>
   
   <div class="footer">
   
-    <!-- <footer class="bg-primary text-center text-lg-start text-white">
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <footer class="footer bg-primary text-center text-white">
+      <div class="p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+         
+        <span style="float: left; ">
+          <a href="#"><img src="../../../assets/img/logo.png" style="width: 30px;" alt="" srcset=""></a> 
+        </span>
+        © {{ currentYear }} Copyright:
+        <a class="text-white" href="#">Anuradha Dissanayake</a>
+        
+        <span style="float: right; ">
+          <a class="text-white" style="margin-left: 10px;" href="/home">Home</a>
+          <a class="text-white" style="margin-left: 10px;" href="/about">About</a>
+          <a class="text-white" style="margin-left: 10px;" href="/contact">Contact Us</a>
+        </span>
       </div>
-    </footer> -->
+    </footer>
+    
   
   </div>
   <!-- End of .container -->

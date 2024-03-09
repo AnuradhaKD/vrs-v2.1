@@ -7,5 +7,5 @@ declare var $:any
   styleUrls: ['./app-layout.component.css']
 })
 export class AppLayoutComponent {
-
+  currentYear: number = new Date().getFullYear();
 }
